@@ -12,7 +12,7 @@ rewards = {('canteen','study','canteen'):1,('canteen','study','hostel'):-1,('can
 values = {'canteen':-1,'acad_building':-1,'hostel':-1}
 policy = {'canteen':0,'acad_building':0,'hostel':0}
 
-# function to calculate state values and associated action
+# function to calculate state values of associated action
 def max_value_action(initial_state,gamma = 0.9):
     action_value = {'study':0,'eat':0}
     for action in actions:
