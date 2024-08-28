@@ -1,3 +1,4 @@
+#define environment
 states = ('canteen','acad_building','hostel')
 actions = ('study','eat')
 probs = {('canteen','1','canteen','study'):0.1,('hostel','-1','canteen','study'):0.3,('acad_building','3','canteen','study'):0.6,
@@ -11,6 +12,7 @@ rewards = {('canteen','study','canteen'):1,('canteen','study','hostel'):-1,('can
 values = {'canteen':-1,'acad_building':-1,'hostel':-1}
 policy = {'canteen':0,'acad_building':0,'hostel':0}
 
+# function to calculate state values and associated action
 def max_value_action(initial_state,gamma = 0.9):
     action_value = {'study':0,'eat':0}
     for action in actions:
